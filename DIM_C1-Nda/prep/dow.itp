@@ -1,0 +1,26 @@
+;;;; GENERATED WITH auto-martini
+; INPUT SMILES: OC(=O)CCCCC1=CC=CC=C1
+; Tristan Bereau (2014)
+
+[moleculetype]
+; molname       nrexcl
+  DOW           2
+
+[atoms]
+; id    type    resnr   residu  atom    cgnr    charge  smiles
+  1     C1      1       DOW     C01     1       0     ; [C]C([O])=O
+  2     Nda      1       DOW     N01     2       0     ; [C][C]
+[bonds]
+; i j   funct   length  force.c.
+  1 2   1       0.25    1250
+
+[constraints]
+;  i   j     funct   length
+
+[angles]
+; i j k         funct   angle   force.c.
+
+[dihedrals]
+;  i     j    k    l   funct   angle  force.c.
+
+

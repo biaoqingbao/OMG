@@ -1,0 +1,12 @@
+GENERATE CONFORMATIONS
+
+
+gmx grompp -f prod.mdp -c 6.6.gro -r 6.0.gro -p system.top -n -o prod.tpr -maxwarn 3
+nohup gmx mdrun -deffnm prod -nt 4 -gpu_id 0 &
+gmx trjconv -f prod.xtc -s prod.tpr -pbc whole -o prod_pbc.xtc
+./get_distances.sh
+
+
+CHECK YOUR RESULTS 
+download to local computer and check the trajectory of both beads:
+vmd 6.6.gro prod_pbc.xtc
